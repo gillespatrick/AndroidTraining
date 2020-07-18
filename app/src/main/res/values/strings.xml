@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AndroidTraining</string>
     <string name="textview" />
-    <string name="happy_birthday">happy</string>
     <string name="Birthday1">happy_birthday</string>
+    <string name="happy_birthday_gilles">Happy Birthday Gilles</string>
+    <string name="from_landry">From Landry</string>
 </resources>
