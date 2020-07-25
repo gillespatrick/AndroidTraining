@@ -1,21 +1,23 @@
 package com.kotlin
 
 fun main() {
-    val diceRange = 1..6
-    val randomNum = diceRange.random()
-    val myFirstDice = Dice()
-    println(myFirstDice.sides)
-    myFirstDice.roll()
+//
+    val myFirstDice = Dice(6)
+    println("Your ${myFirstDice.numSide} sided dice rolled ${myFirstDice.roll()}!")
+
+    val mySecondDice = Dice(20)
+    println("Your ${mySecondDice.numSide} sided dice rolled ${mySecondDice.roll()}!")
+
+
 
 }
 
-class Dice{
+class Dice(val numSide:Int){
     var sides = 6
 
 
-    fun roll(){
-        val randomNumber = (1..6).random()
-        println(randomNumber)
+    fun roll():Int{
+        return (1..numSide).random()
     }
 
 }
