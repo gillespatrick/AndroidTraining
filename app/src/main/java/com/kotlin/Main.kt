@@ -1,33 +1,39 @@
 package com.kotlin
 
-fun main(){
-
-    val age = 25 * 365
-    val y = 4
-    val name = "Gilles"
-    val x = "-._,-"
-    println()
-    printBorder(x,y)
-    println("Happy Birthday ${name} ")
-    printBorder(x,y)
-    println()
-
-    // Let's print a cake!
-    println("   ,,,,,   ")
-    println("   |||||   ")
-    println(" =========")
-    println("@@@@@@@@@@@")
-    println("{~@~@~@~@~}")
-    println("@@@@@@@@@@@")
-    println()
-    println("You are already ${age} days old, ${name}!")
-    println("${age} days old is the very best age to celebrate!")
+fun main() {
+    val age = 24
+    val layers = 5
+    printCakeCandles(age)
+    printCakeTop(age)
+    printCakeBottom(age, layers)
 }
 
-fun printBorder(border:String, timeToRepeat:Int){
-    repeat(timeToRepeat){
-        print(border)
+fun printCakeCandles(age: Int) {
+    print (" ")
+    repeat(age) {
+        print(",")
+    }
+    println() // Print an empty line
+
+    print(" ") // Print the inset of the candles on the cake
+    repeat(age) {
+        print("|")
     }
     println()
+}
 
+fun printCakeTop(age: Int) {
+    repeat(age + 2) {
+        print("=")
+    }
+    println()
+}
+
+fun printCakeBottom(age: Int, layers: Int) {
+    repeat(layers) {
+        repeat(age + 2) {
+            print("@")
+        }
+        println()
+    }
 }
