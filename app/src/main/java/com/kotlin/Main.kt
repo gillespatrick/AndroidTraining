@@ -1,39 +1,21 @@
 package com.kotlin
 
 fun main() {
-    val age = 24
-    val layers = 5
-    printCakeCandles(age)
-    printCakeTop(age)
-    printCakeBottom(age, layers)
+    val diceRange = 1..6
+    val randomNum = diceRange.random()
+    val myFirstDice = Dice()
+    println(myFirstDice.sides)
+    myFirstDice.roll()
+
 }
 
-fun printCakeCandles(age: Int) {
-    print (" ")
-    repeat(age) {
-        print(",")
-    }
-    println() // Print an empty line
+class Dice{
+    var sides = 6
 
-    print(" ") // Print the inset of the candles on the cake
-    repeat(age) {
-        print("|")
-    }
-    println()
-}
 
-fun printCakeTop(age: Int) {
-    repeat(age + 2) {
-        print("=")
+    fun roll(){
+        val randomNumber = (1..6).random()
+        println(randomNumber)
     }
-    println()
-}
 
-fun printCakeBottom(age: Int, layers: Int) {
-    repeat(layers) {
-        repeat(age + 2) {
-            print("@")
-        }
-        println()
-    }
 }
